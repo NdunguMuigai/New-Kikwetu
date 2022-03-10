@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Kikwetu Gaming Shop</title>
 	<link rel="stylesheet" type="text/css" href="Cart.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body background="https://th.bing.com/th/id/R.96142d5bd8a2052b13ee478d7a8bfebf?rik=sTZVEFGJNmPvMg&pid=ImgRaw">
@@ -36,7 +36,7 @@
 </div>
 <!--Code for the side bar-->
 <div class="sidenav">
-  <button class="dropdown-btn">Play Station
+  <br><br><br><br><br><button class="dropdown-btn">Play Station
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
@@ -90,5 +90,38 @@ for (i = 0; i < dropdown.length; i++) {
 }
 </script>
 <!--Code Ends here-->
+
+
+<div class="cart" style="width: 70%">
+  <h2>Available Items</h2>
+    <?php
+      include_once 'dbConfig.php';
+      $query = "SELECT * FROM products ORDER BY pid ASC ";
+      $result = mysqli_query($con,$query);
+      
+      if(mysqli_num_rows($result) > 0) 
+      {
+        while ($row = mysqli_fetch_array($result)) 
+        {
+
+    ?>
+  <div class="col-md-3">
+    <form method="post" action="Cart.php?action=add&pid=<?php echo $row["pid"]; ?>">
+      <div class="product">
+        <img src="Uploads/<?php echo $row["image"]; ?>" class="img-responsive">
+        <h5 class="text-info"><?php echo $row["description"]; ?></h5>
+        <h5 class="text-danger">Kshs <?php echo $row["price"]; ?></h5>
+        <input type="text" name="quantity" class="form-control" value="1">
+        <input type="hidden" name="hidden_name" value="<?php echo $row["description"]; ?>">
+        <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
+        <input type="submit" name="add" style="margin-top: 5px;" class="btn btn-success" value="Add to Cart" onclick="return confirm('Add item to cart?')">
+      </div>
+    </form>
+  </div>
+<?php
+        }
+      }
+?>
+</div>
 </body>
 </html>

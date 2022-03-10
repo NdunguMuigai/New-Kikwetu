@@ -1,7 +1,8 @@
 <?php
 include 'dbConfig.php';
+session_start();
 
-if (isset($_POST['register'])) 
+if (isset($_POST['submit'])) 
 {
    $fname=$_POST['fname'];
    $lname=$_POST['lname'];
@@ -35,6 +36,29 @@ if (isset($_POST['register']))
    } 
    }
 
+}
+elseif (isset($_POST['login'])) 
+{
+  $email=$_POST['email'];
+  $password=$_POST['password'];
+  $password=md5($password);
+  $query="SELECT * FROM users WHERE email='$email' AND password='$password'";
+  $result=mysqli_query($con,$query);
+  $row=mysqli_fetch_array($result);
+
+   if ($row['email']==$email && $row['password']==$password) 
+   {
+      $_SESSION['user']=$userName;
+      $_SESSION['login_time_stamp']=time();
+      echo '<script>alert("Welcome!")</script>';
+      header("Location:Cart.php");
+   }
+   else
+   {
+      $_SESSION["error"]="Wrong username/password combination";
+      header("location:UserLogin.php");
+      array_push($errors, "wrong username/password combination");
+   }
 }
 
 ?>
@@ -114,7 +138,7 @@ if (isset($_POST['register']))
                   </div>
                   <div class="field btn">
                      <div class="btn-layer"></div>
-                     <input type="submit" name="register" value="Sign up" onclick="return confirm('Register account?')">
+                     <input type="submit" name="submit" value="Sign up" onclick="return confirm('Register account?')">
                   </div>
                </form>
                <!--sIGN UP ENDS HERE-->
