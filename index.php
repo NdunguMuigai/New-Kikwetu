@@ -1,15 +1,12 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Kikwetu Gaming Shop</title>
-	<link rel="stylesheet" type="text/css" href="Cart.css">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kikwetu Gaming Shop</title>
+  <link rel="stylesheet" type="text/css" href="Cart.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 <body background="https://th.bing.com/th/id/R.96142d5bd8a2052b13ee478d7a8bfebf?rik=sTZVEFGJNmPvMg&pid=ImgRaw">
 
@@ -19,29 +16,27 @@
 
 
 
-	<a href="Cart.php"><img src="Image Resources/Cart.png"></a>
-	<div class="dropdown">
-		<button class="dropbtn"><img src="Image Resources/User Logo.png"><i class="fa fa-caret-down"></i></button>
-		<div class="dropdown-content">
-			<!--<p><?php echo $_SESSION['user'];?></p>-->
-			<a href="Info.php">My Account</a>
-			<a href="Orders.php">My orders</a>
-			<a href="LogOut.php" onclick="return confirm('Are you sure you want to log out?');">Log out</a>
-		</div>
-	</div>
+  <a href="Cart.php"><img src="Image Resources/Cart.png"></a>
+  <div class="dropdown">
+    <button class="dropbtn"><img src="Image Resources/User Logo.png"><i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-content">
+      <!--<p><?php echo $_SESSION['user'];?></p>-->
+      <a href="Info.php">My Account</a>
+      <a href="Orders.php">My orders</a>
+      <a href="LogOut.php" onclick="return confirm('Are you sure you want to log out?');">Log out</a>
+    </div>
+  </div>
 
-	<div class="search-container">
-    <form action="index.php">
-   		<input type="text" placeholder="Search product">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
+  <div class="search">
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" placeholder="Search...">
     </div>
 
     <!--<a href="UserInfo.php">Hi, <?php echo $_SESSION['user'];?></a>  -->
 </div>
 <!--Code for the side bar-->
 <div class="sidenav">
-  <br><br><br><br><br><button class="dropdown-btn">Play Station
+  <br><br><br><br><br><br>
+  <button class="dropdown-btn">Play Station
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
@@ -96,8 +91,7 @@ for (i = 0; i < dropdown.length; i++) {
 </script>
 <!--Code Ends here-->
 
-
-<div class="cart" style="width: 70%">
+<div class="cart" style="width: 60%">
   <h2>Available Items</h2>
     <?php
       include_once 'dbConfig.php';
@@ -128,5 +122,6 @@ for (i = 0; i < dropdown.length; i++) {
       }
 ?>
 </div>
+
 </body>
 </html>

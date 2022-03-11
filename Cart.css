@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 
 *
 {
@@ -183,6 +182,10 @@ h1
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+.cart
+{
+  margin-left: 300px;
 }
 .product
 {
