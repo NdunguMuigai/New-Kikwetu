@@ -1,3 +1,7 @@
+<?php
+include_once 'dbConfig.php';
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,15 +31,15 @@
     </div>
   </div>
 
-  <div class="search">
+  <!--<div class="search">
       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" placeholder="Search...">
-    </div>
+    </div>-->
 
     <!--<a href="UserInfo.php">Hi, <?php echo $_SESSION['user'];?></a>  -->
 </div>
 <!--Code for the side bar-->
 <div class="sidenav">
-  <br><br><br><br><br><br>
+  <br><br><br><br><br><br><br>
   <button class="dropdown-btn">Play Station
     <i class="fa fa-caret-down"></i>
   </button>
@@ -91,7 +95,7 @@ for (i = 0; i < dropdown.length; i++) {
 </script>
 <!--Code Ends here-->
 
-<div class="cart" style="width: 60%">
+<!--<div class="cart" style="width: 60%">
   <h2>Available Items</h2>
     <?php
       include_once 'dbConfig.php';
@@ -121,7 +125,7 @@ for (i = 0; i < dropdown.length; i++) {
         }
       }
 ?>
-</div>
+</div>-->
 
 </body>
 </html>
