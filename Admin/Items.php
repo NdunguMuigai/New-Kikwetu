@@ -70,19 +70,19 @@ if (isset($_POST['upload']))
 					<option value="ps5game">Play Station 5 Games</option>
 				</optgroup>
 				<optgroup label="X Box Series S">
-					<option value="xboxss">X Box Series S Controller</option>
-					<option value="xboxss">X Box Series S Console</option>
-					<option value="xboxss">X Box Series S Games</option>
+					<option value="seriesscontroller">X Box Series S Controller</option>
+					<option value="seriessconsole">X Box Series S Console</option>
+					<option value="seriessgame">X Box Series S Games</option>
 				</optgroup>
 				<optgroup label="X Box Series S Bundle">
-					<option value="xboxssb">X Box Series S Bundle Controller</option>
-					<option value="xboxssb">X Box Series S Bundle Console</option>
-					<option value="xboxssb">X Box Series S Bundle Games</option>
+					<option value="seriessbcontroller">X Box Series S Bundle Controller</option>
+					<option value="seriessbconsole">X Box Series S Bundle Console</option>
+					<option value="seriessbgame">X Box Series S Bundle Games</option>
 				</optgroup>
 				<optgroup label="X Box Series X">
-					<option value="xboxsx">X Box Series X Controller</option>
-					<option value="xboxsx">X Box Series X Console</option>
-					<option value="xboxsx">X Box Series X Games</option>
+					<option value="seriesxcontroller">X Box Series X Controller</option>
+					<option value="seriesxconsole">X Box Series X Console</option>
+					<option value="seriesxgame">X Box Series X Games</option>
 				</optgroup>
 				<optgroup label="Nintendo DS">
 					<option value="ndsc">Nintendo DS Controller</option>
