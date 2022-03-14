@@ -17,11 +17,13 @@ if (isset($_POST['upload']))
 	if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) 
 	{
 		echo '<script>alert("Product added successully!")</script>';
-		header("Location:Items.php");
+		echo '<script>window.location="Items.php"</script>';
+		//header("Location:Items.php");
 	}
 	else
 	{
-		$msg="Upload failed";
+		echo '<script>alert("Upload not successful!")</script>';
+		echo '<script>window.location="Items.php"</script>';
 	}
 }
 
